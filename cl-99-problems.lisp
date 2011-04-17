@@ -101,3 +101,21 @@
 (defun repli (lst n)
   (my-flatten (mapcar (lambda (x)
                         (loop repeat n collect x)) lst)))
+
+;; P16
+(defun drop (lst n)
+  (labels ((drop* (lst n ind)
+             (cond
+               ((null lst) nil)
+               ((zerop (mod ind n)) (drop* (rest lst) n (1+ ind)))
+               (t (cons (first lst) (drop* (rest lst) n (1+ ind)))))))
+    (drop* lst n 1)))
+
+;; P17
+(defun split (lst n)
+  (labels ((split* (lst n ind res)
+             (cond
+               ((null lst) nil)
+               ((= ind n) (list (reverse (cons (first lst) res)) (rest lst)))
+               (t (split* (rest lst) n (1+ ind) (cons (first lst) res))))))
+    (split* lst n 0 nil)))
