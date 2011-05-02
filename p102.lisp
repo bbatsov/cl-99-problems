@@ -1,4 +1,5 @@
 ;; 1.02 (*) Find the penultimate(last but one) element of a list.
+(in-package #:lisp-problems)
 
 (defun penultimate1 (lst)
   (first (rest (reverse lst))))

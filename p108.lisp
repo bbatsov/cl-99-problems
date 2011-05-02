@@ -1,4 +1,5 @@
 ;; 1.08 (**) Eliminate consecutive duplicates of list elements.
+(in-package #:lisp-problems)
 
 (defun compress (lst)
   (labels ((compress* (lst result)

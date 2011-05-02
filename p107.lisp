@@ -1,4 +1,5 @@
 ;; 1.07 (**) Flatten a nested list structure.
+(in-package #:lisp-problems)
 
 (defun flatten (lst)
   (labels ((flatten* (lst result)

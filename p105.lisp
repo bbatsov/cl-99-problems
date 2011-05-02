@@ -1,4 +1,5 @@
 ;; 1.05 (*) Reverse a list.
+(in-package #:lisp-problems)
 
 (defun my-reverse (lst)
   (let (result)

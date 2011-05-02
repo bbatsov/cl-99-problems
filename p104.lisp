@@ -1,4 +1,5 @@
 ;; 1.04 (*) Find the number of elements of a list.
+(in-package #:lisp-problems)
 
 (defun my-length (lst)
   (loop for x in lst count x))
