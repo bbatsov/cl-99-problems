@@ -1,4 +1,5 @@
 ;; 1.16 (**) Drop every N'th element from a list.
+(in-package #:lisp-problems)
 
 (defun drop (lst n)
   (loop
